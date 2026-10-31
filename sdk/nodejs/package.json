@@ -1,0 +1,25 @@
+{
+  "name": "@hitechcloud-vietnam/sale-ai-sdk",
+  "version": "1.0.0",
+  "description": "Official Node.js/TypeScript SDK for the HiTechCloud Sale AI API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "node --test"
+  },
+  "keywords": ["hitechcloud", "sale-ai", "chatbot", "messenger", "zalo", "sdk", "typescript"],
+  "author": "HiTechCloud Vietnam <support@hitechcloud.vn>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hitechcloud-vietnam/hitechcloud-sale-ai-sdk.git"
+  },
+  "engines": { "node": ">=18.0.0" },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.11.0"
+  }
+}
