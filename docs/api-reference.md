@@ -1,13 +1,17 @@
-# Tham chiếu API
+# API reference
 
-Host production: `https://sale-ai.hitechcloud.vn` · Base path: `/api/v1`
+> **English** | [Tiếng Việt](api-reference.vi.md)
 
-Tổng số phương thức SDK: **146** (chưa tính các helper gửi tin có kiểu).
+---
 
-## Bot & kênh kết nối (Facebook/Instagram/Zalo/Website) (`client.bots`)
+Production host: `https://sale-ai.hitechcloud.vn` · Base path: `/api/v1`
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+Total SDK methods: **146** (excluding the typed message-sending helpers).
+
+## Bots & connected channels (Facebook/Instagram/Zalo/Website) (`client.bots`)
+
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/bots` |
 | `get` | GET | `/api/v1/bots/{id}` |
 | `create` | POST | `/api/v1/bots` |
@@ -18,10 +22,10 @@ Tổng số phương thức SDK: **146** (chưa tính các helper gửi tin có 
 | `updateSettings` | PATCH | `/api/v1/bots/{bot_id}/settings` |
 | `refreshAccessToken` | POST | `/api/v1/bots/{bot_id}/access-token/refresh` |
 
-## Kịch bản hội thoại (flows) và khối (blocks) (`client.flows`)
+## Conversation flows & blocks (`client.flows`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/flows` |
 | `get` | GET | `/api/v1/flows/{id}` |
 | `create` | POST | `/api/v1/flows` |
@@ -35,10 +39,10 @@ Tổng số phương thức SDK: **146** (chưa tính các helper gửi tin có 
 | `updateBlock` | PATCH | `/api/v1/flows/{id}/blocks/{block_id}` |
 | `deleteBlock` | DELETE | `/api/v1/flows/{id}/blocks/{block_id}` |
 
-## Từ khoá tự trả lời (keywords) (`client.keywords`)
+## Auto-reply keywords (`client.keywords`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/keywords` |
 | `get` | GET | `/api/v1/keywords/{id}` |
 | `create` | POST | `/api/v1/keywords` |
@@ -46,10 +50,10 @@ Tổng số phương thức SDK: **146** (chưa tính các helper gửi tin có 
 | `delete` | DELETE | `/api/v1/keywords/{id}` |
 | `test` | POST | `/api/v1/keywords/test` |
 
-## Chuỗi tin hẹn giờ (sequences) và các bước (`client.sequences`)
+## Message sequences & steps (`client.sequences`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/sequences` |
 | `get` | GET | `/api/v1/sequences/{id}` |
 | `create` | POST | `/api/v1/sequences` |
@@ -62,10 +66,10 @@ Tổng số phương thức SDK: **146** (chưa tính các helper gửi tin có 
 | `subscribe` | POST | `/api/v1/sequences/{id}/subscribe` |
 | `unsubscribe` | POST | `/api/v1/sequences/{id}/unsubscribe` |
 
-## Gửi hàng loạt (broadcasts) (`client.broadcasts`)
+## Broadcasts (`client.broadcasts`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/broadcasts` |
 | `get` | GET | `/api/v1/broadcasts/{id}` |
 | `create` | POST | `/api/v1/broadcasts` |
@@ -77,10 +81,10 @@ Tổng số phương thức SDK: **146** (chưa tính các helper gửi tin có 
 | `previewAudience` | POST | `/api/v1/broadcasts/{id}/audience/preview` |
 | `cancel` | POST | `/api/v1/broadcasts/{id}/cancel` |
 
-## Người theo dõi (subscribers), nhãn, trường tuỳ chỉnh, ghi chú (`client.subscribers`)
+## Subscribers, tags, custom fields & notes (`client.subscribers`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/subscribers` |
 | `get` | GET | `/api/v1/subscribers/{id}` |
 | `create` | POST | `/api/v1/subscribers` |
@@ -97,40 +101,40 @@ Tổng số phương thức SDK: **146** (chưa tính các helper gửi tin có 
 | `markSeen` | POST | `/api/v1/subscribers/{id}/mark-seen` |
 | `typing` | POST | `/api/v1/subscribers/{id}/typing` |
 
-## Nhãn (tags) (`client.tags`)
+## Tags (`client.tags`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/tags` |
 | `get` | GET | `/api/v1/tags/{id}` |
 | `create` | POST | `/api/v1/tags` |
 | `update` | PATCH | `/api/v1/tags/{id}` |
 | `delete` | DELETE | `/api/v1/tags/{id}` |
 
-## Phân khúc (segments) (`client.segments`)
+## Segments (`client.segments`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/segments` |
 | `get` | GET | `/api/v1/segments/{id}` |
 | `create` | POST | `/api/v1/segments` |
 | `update` | PATCH | `/api/v1/segments/{id}` |
 | `delete` | DELETE | `/api/v1/segments/{id}` |
 
-## Sản phẩm (products) (`client.products`)
+## Products (`client.products`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/products` |
 | `get` | GET | `/api/v1/products/{id}` |
 | `create` | POST | `/api/v1/products` |
 | `update` | PATCH | `/api/v1/products/{id}` |
 | `delete` | DELETE | `/api/v1/products/{id}` |
 
-## Đơn hàng (orders) (`client.orders`)
+## Orders (`client.orders`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/orders` |
 | `get` | GET | `/api/v1/orders/{id}` |
 | `create` | POST | `/api/v1/orders` |
@@ -139,96 +143,96 @@ Tổng số phương thức SDK: **146** (chưa tính các helper gửi tin có 
 | `createFromConversation` | POST | `/api/v1/orders/from-conversation` |
 | `updateStatus` | POST | `/api/v1/orders/{id}/status` |
 
-## Quy tắc trả lời bình luận (comment rules) (`client.commentRules`)
+## Comment reply rules (`client.commentRules`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/comment-rules` |
 | `get` | GET | `/api/v1/comment-rules/{id}` |
 | `create` | POST | `/api/v1/comment-rules` |
 | `update` | PATCH | `/api/v1/comment-rules/{id}` |
 | `delete` | DELETE | `/api/v1/comment-rules/{id}` |
 
-## Công cụ tăng trưởng (widgets) (`client.widgets`)
+## Growth widgets (`client.widgets`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/widgets` |
 | `get` | GET | `/api/v1/widgets/{id}` |
 | `create` | POST | `/api/v1/widgets` |
 | `update` | PATCH | `/api/v1/widgets/{id}` |
 | `delete` | DELETE | `/api/v1/widgets/{id}` |
 
-## Ý định AI (intents) (`client.intents`)
+## AI intents (`client.intents`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/ai/intents` |
 | `get` | GET | `/api/v1/ai/intents/{id}` |
 | `create` | POST | `/api/v1/ai/intents` |
 | `update` | PATCH | `/api/v1/ai/intents/{id}` |
 | `delete` | DELETE | `/api/v1/ai/intents/{id}` |
 
-## Kho tri thức AI (knowledge base) (`client.knowledgeBase`)
+## AI knowledge base (`client.knowledgeBase`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/ai/knowledge-base` |
 | `get` | GET | `/api/v1/ai/knowledge-base/{id}` |
 | `create` | POST | `/api/v1/ai/knowledge-base` |
 | `update` | PATCH | `/api/v1/ai/knowledge-base/{id}` |
 | `delete` | DELETE | `/api/v1/ai/knowledge-base/{id}` |
 
-## Người dùng / nhân sự (team) (`client.users`)
+## Users / team (`client.users`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/users` |
 | `get` | GET | `/api/v1/users/{id}` |
 | `create` | POST | `/api/v1/users` |
 | `update` | PATCH | `/api/v1/users/{id}` |
 | `delete` | DELETE | `/api/v1/users/{id}` |
 
-## Vai trò & quyền (roles) (`client.roles`)
+## Roles & permissions (`client.roles`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/roles` |
 | `get` | GET | `/api/v1/roles/{id}` |
 | `create` | POST | `/api/v1/roles` |
 | `update` | PATCH | `/api/v1/roles/{id}` |
 | `delete` | DELETE | `/api/v1/roles/{id}` |
 
-## Đăng ký webhook (webhooks) (`client.webhooks`)
+## Webhook registration (`client.webhooks`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/webhooks` |
 | `get` | GET | `/api/v1/webhooks/{id}` |
 | `create` | POST | `/api/v1/webhooks` |
 | `update` | PATCH | `/api/v1/webhooks/{id}` |
 | `delete` | DELETE | `/api/v1/webhooks/{id}` |
 
-## Thao tác bình luận trên kênh (comments) (`client.comments`)
+## Channel comment operations (`client.comments`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `hide` | POST | `/api/v1/comments/{comment_id}/hide` |
 | `like` | POST | `/api/v1/comments/{comment_id}/like` |
 
-## Trợ lý AI bán hàng (config / train / suggest / handover) (`client.ai`)
+## Sales AI assistant (config / train / suggest / handover) (`client.ai`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `updateConfig` | PATCH | `/api/v1/ai/config` |
 | `train` | POST | `/api/v1/ai/train` |
 | `suggestReply` | POST | `/api/v1/ai/suggest-reply` |
 | `handover` | POST | `/api/v1/ai/handover` |
 
-## Hộp thư đa kênh (conversations / inbox) (`client.conversations`)
+## Unified inbox (conversations / inbox) (`client.conversations`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `list` | GET | `/api/v1/conversations` |
 | `get` | GET | `/api/v1/conversations/{id}` |
 | `assign` | POST | `/api/v1/conversations/{id}/assign` |
@@ -236,27 +240,27 @@ Tổng số phương thức SDK: **146** (chưa tính các helper gửi tin có 
 | `addLabels` | POST | `/api/v1/conversations/{id}/labels` |
 | `close` | POST | `/api/v1/conversations/{id}/close` |
 
-## Báo cáo & phân tích (analytics) (`client.analytics`)
+## Reports & analytics (`client.analytics`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `overview` | GET | `/api/v1/analytics/overview` |
 | `bot` | GET | `/api/v1/analytics/bots/{bot_id}` |
 | `flow` | GET | `/api/v1/analytics/flows/{id}` |
 | `broadcast` | GET | `/api/v1/analytics/broadcasts/{id}` |
 | `subscriberGrowth` | GET | `/api/v1/analytics/subscriber-growth` |
 
-## Cài đặt tài khoản (settings) (`client.settings`)
+## Account settings (`client.settings`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `get` | GET | `/api/v1/settings` |
 | `update` | PATCH | `/api/v1/settings` |
 
-## Gửi tin nhắn (`client.messages`)
+## Messaging (`client.messages`)
 
-| Phương thức | HTTP | Endpoint |
-|-------------|------|----------|
+| Method | HTTP | Endpoint |
+|--------|------|----------|
 | `send` | POST | `/api/v1/bots/{bot_id}/messages` |
 | `sendText` | POST | `/api/v1/bots/{bot_id}/messages` |
 | `sendImage` | POST | `/api/v1/bots/{bot_id}/messages` |
@@ -265,11 +269,12 @@ Tổng số phương thức SDK: **146** (chưa tính các helper gửi tin có 
 | `sendButton` | POST | `/api/v1/bots/{bot_id}/messages` |
 | `sendCarousel` | POST | `/api/v1/bots/{bot_id}/messages` |
 
-> Tất cả phương thức gửi tin cần `X-Page-Access-Token`.
+> All message-sending methods require `X-Page-Access-Token`.
 
 ## Webhook
 
-Các sự kiện phát qua HTTP POST, header chữ ký `X-SaleAI-Signature` (HMAC-SHA256):
+Events are delivered via HTTP POST with the `X-SaleAI-Signature` (HMAC-SHA256)
+signature header:
 
 ```
 message.received, message.delivered, message.seen, subscriber.created, subscriber.updated, subscriber.unsubscribed, tag.added, keyword.matched, flow.completed, sequence.completed, handover.requested, handover.resolved, order.created, order.updated, order.paid, comment.received, broadcast.sent, broadcast.completed

@@ -1,3 +1,7 @@
-# Ví dụ Java
+# Java examples
 
-Thêm `vn.hitechcloud:sale-ai-sdk` vào Maven rồi biên dịch `BasicUsage.java`.
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
+Add `vn.hitechcloud:sale-ai-sdk` to Maven, then compile `BasicUsage.java`.

@@ -1,17 +1,21 @@
-# Tài liệu HiTechCloud Sale AI SDK
+# HiTechCloud Sale AI SDK Documentation
 
-Bộ SDK đa ngôn ngữ cho **HiTechCloud Sale AI** — nền tảng chatbot bán hàng &
-tự động hoá hội thoại đa kênh.
+> **English** | [Tiếng Việt](README.vi.md)
 
-| Trang | Nội dung |
-|-------|----------|
-| [getting-started.md](getting-started.md) | Cài đặt và gọi API đầu tiên |
+---
+
+The multi-language SDK suite for **HiTechCloud Sale AI** — the multichannel
+sales chatbot and conversation automation platform.
+
+| Page | Content |
+|------|---------|
+| [getting-started.md](getting-started.md) | Install the SDK and make the first API call |
 | [authentication.md](authentication.md) | Access token & page access token |
-| [api-reference.md](api-reference.md) | Danh mục tài nguyên và endpoint |
-| [error-handling.md](error-handling.md) | Mã lỗi và cách xử lý |
-| [rate-limiting.md](rate-limiting.md) | Phân trang & giới hạn tốc độ |
+| [api-reference.md](api-reference.md) | Resource and endpoint catalog |
+| [error-handling.md](error-handling.md) | Error codes and how to handle them |
+| [rate-limiting.md](rate-limiting.md) | Pagination & rate limits |
 
-- Host production: `https://sale-ai.hitechcloud.vn`
-- Host sandbox: `https://sale-ai-sandbox.hitechcloud.vn`
+- Production host: `https://sale-ai.hitechcloud.vn`
+- Sandbox host: `https://sale-ai-sandbox.hitechcloud.vn`
 - Base path: `/api/v1`
 - Webhook signature header: `X-SaleAI-Signature` (HMAC-SHA256)

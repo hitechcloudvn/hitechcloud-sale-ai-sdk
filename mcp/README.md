@@ -1,20 +1,24 @@
 # HiTechCloud Sale AI - MCP server
 
-MCP (Model Context Protocol) server cho HiTechCloud Sale AI. Cho phép trợ lý AI
-gọi trực tiếp các thao tác chính: liệt kê bot, xuất bản kịch bản, gửi tin, xem
-báo cáo, gợi ý trả lời...
+> **English** | [Tiếng Việt](README.vi.md)
 
-## Cài đặt & chạy
+---
+
+MCP (Model Context Protocol) server for HiTechCloud Sale AI. It lets AI
+assistants invoke core operations directly: list bots, publish flows, send
+messages, view reports, suggest replies, and more.
+
+## Install & run
 
 ```bash
 cd mcp
 npm install
 export SALE_AI_TOKEN=YOUR_TOKEN
-export SALE_AI_PAGE_ACCESS_TOKEN=PAGE_ACCESS_TOKEN   # tuỳ chọn, cho gửi tin
+export SALE_AI_PAGE_ACCESS_TOKEN=PAGE_ACCESS_TOKEN   # optional, for sending messages
 node server.js
 ```
 
-## Cấu hình client MCP
+## MCP client configuration
 
 ```json
 {
@@ -28,7 +32,7 @@ node server.js
 }
 ```
 
-## Tool
+## Tools
 
 `list_bots`, `get_bot`, `list_flows`, `publish_flow`, `list_subscribers`,
 `send_text`, `list_broadcasts`, `send_broadcast`, `list_orders`,

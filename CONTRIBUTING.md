@@ -1,29 +1,35 @@
-# Đóng góp
+# Contributing
 
-Cảm ơn bạn quan tâm đóng góp cho HiTechCloud Sale AI SDK!
+> **English** | [Tiếng Việt](CONTRIBUTING.vi.md)
 
-## Cấu trúc kho mã
+---
+
+Thank you for your interest in contributing to the HiTechCloud Sale AI SDK!
+
+## Repository layout
 
 ```
-sdk/nodejs   - SDK TypeScript (@hitechcloudvn/sale-ai-sdk)
-sdk/python   - SDK Python (hitechcloud-sale-ai)
-sdk/php      - SDK PHP (hitechcloudvn/sale-ai-sdk)
-sdk/go       - SDK Go
-sdk/java     - SDK Java (vn.hitechcloud:sale-ai-sdk)
+sdk/nodejs   - TypeScript SDK (@hitechcloudvn/sale-ai-sdk)
+sdk/python   - Python SDK (hitechcloud-sale-ai)
+sdk/php      - PHP SDK (hitechcloudvn/sale-ai-sdk)
+sdk/go       - Go SDK
+sdk/java     - Java SDK (vn.hitechcloud:sale-ai-sdk)
 mcp          - MCP server (Node)
-docs         - Tài liệu tiếng Việt
-examples     - Ví dụ theo từng ngôn ngữ
-openapi.json - Đặc tả OpenAPI 3.0
+docs         - Documentation
+examples     - Per-language examples
+openapi.json - OpenAPI 3.0 specification
 ```
 
-## Nguyên tắc
+## Principles
 
-- `openapi.json` và các SDK phải bám sát endpoint thật của Sale AI.
-- Giữ chữ ký phương thức nhất quán giữa các ngôn ngữ.
-- Mọi thao tác kênh (gửi tin, ẩn/thích bình luận) phải hỗ trợ `X-Page-Access-Token`.
-- Thêm/sửa endpoint: cập nhật đồng thời cả 5 SDK, `openapi.json` và `docs/`.
+- `openapi.json` and the SDKs must track the real HiTechCloud Sale AI endpoints.
+- Keep method signatures consistent across languages.
+- Every channel operation (send messages, hide/like comments) must support
+  `X-Page-Access-Token`.
+- When adding or changing an endpoint: update all 5 SDKs, `openapi.json` and
+  `docs/` together.
 
-## Kiểm tra cú pháp nhanh
+## Quick syntax checks
 
 ```bash
 python -m py_compile sdk/python/hitechcloud_sale_ai/*.py sdk/python/hitechcloud_sale_ai/resources/*.py
@@ -31,8 +37,8 @@ node --check mcp/server.js
 php -l sdk/php/src/HttpClient.php
 ```
 
-## Quy trình
+## Workflow
 
-1. Fork và tạo nhánh tính năng.
-2. Commit rõ ràng, có kiểm thử khi cần.
-3. Mở Pull Request mô tả thay đổi.
+1. Fork and create a feature branch.
+2. Commit clear, well-tested changes.
+3. Open a Pull Request describing the changes.

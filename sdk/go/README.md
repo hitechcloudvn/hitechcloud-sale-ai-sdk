@@ -1,18 +1,22 @@
 # HiTechCloud Sale AI - Go SDK
 
-SDK Go chính thức cho **HiTechCloud Sale AI**.
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
+Official Go SDK for **HiTechCloud Sale AI**.
 
 - Module: `github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/go`
 - Host: `https://sale-ai.hitechcloud.vn`
 - Base path: `/api/v1`
 
-## Cài đặt
+## Installation
 
 ```bash
 go get github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/go
 ```
 
-## Bắt đầu nhanh
+## Quick start
 
 ```go
 package main

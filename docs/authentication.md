@@ -1,40 +1,44 @@
-# Xác thực
+# Authentication
 
-HiTechCloud Sale AI dùng hai lớp xác thực.
+> **English** | [Tiếng Việt](authentication.vi.md)
+
+---
+
+HiTechCloud Sale AI uses two layers of authentication.
 
 ## 1. Access token (Bearer)
 
-Bắt buộc cho mọi request, gửi trong header `Authorization`:
+Required on every request, sent in the `Authorization` header:
 
 ```
 Authorization: Bearer YOUR_TOKEN
 ```
 
-Trong SDK: truyền `token` khi khởi tạo client, hoặc gọi `setToken()`.
+In the SDK: pass `token` when constructing the client, or call `setToken()`.
 
-## 2. Page access token theo bot
+## 2. Per-bot page access token
 
-Các endpoint tác động trực tiếp lên kênh (gửi tin, ẩn/thích bình luận) cần thêm
-header `X-Page-Access-Token` chứa token trang của bot tương ứng. Token này được
-lưu mã hoá phía máy chủ và không bao giờ trả về đầy đủ.
+Endpoints that act directly on a channel (send messages, hide/like comments)
+also require the `X-Page-Access-Token` header carrying that bot's page token.
+This token is stored encrypted server-side and never returned in full.
 
 ```
 X-Page-Access-Token: PAGE_ACCESS_TOKEN
 ```
 
-Trong SDK, bạn có thể:
+In the SDK, you can:
 
-- Đặt mặc định cho client: `SaleAI(token=..., page_access_token=...)`.
-- Hoặc truyền theo từng lời gọi: `client.messages.send_text(..., page_access_token=...)`.
+- Set a default on the client: `SaleAI(token=..., page_access_token=...)`.
+- Or pass it per call: `client.messages.send_text(..., page_access_token=...)`.
 
-## Mã lỗi xác thực
+## Authentication error codes
 
-| HTTP | Mã lỗi | Ý nghĩa |
-|------|--------|---------|
-| 401 | `UNAUTHORIZED` | Thiếu hoặc sai access token |
-| 401 | `TOKEN_EXPIRED` | Token đã hết hạn |
-| 403 | `FORBIDDEN` | Không có quyền với tài nguyên/bot |
-| 403 | `PAGE_TOKEN_REQUIRED` | Thiếu `X-Page-Access-Token` cho thao tác kênh |
+| HTTP | Error code | Meaning |
+|------|------------|---------|
+| 401 | `UNAUTHORIZED` | Missing or invalid access token |
+| 401 | `TOKEN_EXPIRED` | Token has expired |
+| 403 | `FORBIDDEN` | No permission for the resource/bot |
+| 403 | `PAGE_TOKEN_REQUIRED` | Missing `X-Page-Access-Token` for a channel operation |
 
-> Luôn gọi API từ máy chủ. Không để lộ access token hay page access token trong
-> ứng dụng phía người dùng.
+> Always call the API from your server. Never expose the access token or page
+> access token in client-side applications.

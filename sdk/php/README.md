@@ -1,18 +1,22 @@
 # HiTechCloud Sale AI - PHP SDK
 
-SDK PHP chính thức cho **HiTechCloud Sale AI** (PHP 8+, Guzzle).
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
+Official PHP SDK for **HiTechCloud Sale AI** (PHP 8+, Guzzle).
 
 - Host: `https://sale-ai.hitechcloud.vn`
 - Base path: `/api/v1`
 - Namespace: `HiTechCloud\SaleAI`
 
-## Cài đặt
+## Installation
 
 ```bash
 composer require hitechcloudvn/sale-ai-sdk
 ```
 
-## Bắt đầu nhanh
+## Quick start
 
 ```php
 <?php

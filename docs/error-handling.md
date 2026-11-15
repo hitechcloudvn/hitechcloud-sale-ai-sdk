@@ -1,23 +1,27 @@
-# Xử lý lỗi
+# Error handling
 
-Khi có lỗi, API trả `status: "error"` kèm `error.code`, `error.message` và (tuỳ
-trường hợp) `error.details`.
+> **English** | [Tiếng Việt](error-handling.vi.md)
+
+---
+
+When an error occurs, the API returns `status: "error"` with `error.code`,
+`error.message` and (where applicable) `error.details`.
 
 ```json
 {
   "status": "error",
   "error": {
     "code": "VALIDATION_ERROR",
-    "message": "Truong 'subscriber_id' la bat buoc.",
+    "message": "Field 'subscriber_id' is required.",
     "details": [{ "field": "subscriber_id", "issue": "required" }]
   }
 }
 ```
 
-## Bảng mã lỗi
+## Error code table
 
-| HTTP | Mã lỗi | Lớp ngoại lệ SDK |
-|------|--------|------------------|
+| HTTP | Error code | SDK exception class |
+|------|------------|---------------------|
 | 400 | `BAD_REQUEST` | `SaleAIError` |
 | 401 | `UNAUTHORIZED` / `TOKEN_EXPIRED` | `AuthenticationError` |
 | 403 | `FORBIDDEN` / `PAGE_TOKEN_REQUIRED` | `AuthorizationError` |
@@ -29,7 +33,7 @@ trường hợp) `error.details`.
 | 502 | `CHANNEL_ERROR` | `ChannelError` |
 | 503 | `SERVICE_UNAVAILABLE` | `ServerError` |
 
-## Ví dụ (Python)
+## Example (Python)
 
 ```python
 from hitechcloud_sale_ai import SaleAI, ValidationError, RateLimitError
@@ -40,8 +44,9 @@ try:
 except ValidationError as e:
     print(e.code, e.message, e.details)
 except RateLimitError as e:
-    print("Thử lại sau", e.retry_after, "giây")
+    print("Retry after", e.retry_after, "seconds")
 ```
 
-> Luôn kiểm tra `error.code` thay vì chuỗi `message` (có thể đổi). Với
-> `CHANNEL_ERROR`, xem `error.details` để biết lỗi gốc từ nền tảng kênh.
+> Always check `error.code` rather than the `message` string (which may change).
+> For `CHANNEL_ERROR`, see `error.details` for the underlying channel-platform
+> error.

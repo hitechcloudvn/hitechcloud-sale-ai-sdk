@@ -1,17 +1,21 @@
 # HiTechCloud Sale AI - Node.js / TypeScript SDK
 
-SDK TypeScript chính thức cho **HiTechCloud Sale AI**.
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
+Official TypeScript SDK for **HiTechCloud Sale AI**.
 
 - Host: `https://sale-ai.hitechcloud.vn`
 - Base path: `/api/v1`
 
-## Cài đặt
+## Installation
 
 ```bash
 npm install @hitechcloudvn/sale-ai-sdk
 ```
 
-## Bắt đầu nhanh
+## Quick start
 
 ```ts
 import { SaleAI } from "@hitechcloudvn/sale-ai-sdk";

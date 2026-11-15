@@ -1,12 +1,16 @@
 # HiTechCloud Sale AI - Java SDK
 
-SDK Java chính thức cho **HiTechCloud Sale AI**.
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
+Official Java SDK for **HiTechCloud Sale AI**.
 
 - Maven: `vn.hitechcloud:sale-ai-sdk`
 - Host: `https://sale-ai.hitechcloud.vn`
 - Base path: `/api/v1`
 
-## Cài đặt (Maven)
+## Installation (Maven)
 
 ```xml
 <dependency>
@@ -16,7 +20,7 @@ SDK Java chính thức cho **HiTechCloud Sale AI**.
 </dependency>
 ```
 
-## Bắt đầu nhanh
+## Quick start
 
 ```java
 import vn.hitechcloud.saleai.SaleAI;

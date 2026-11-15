@@ -1,4 +1,8 @@
-# Ví dụ PHP
+# PHP examples
+
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
 
 ```bash
 composer require hitechcloudvn/sale-ai-sdk

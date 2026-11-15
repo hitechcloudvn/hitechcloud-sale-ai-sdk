@@ -1,41 +1,45 @@
 # HiTechCloud Sale AI SDK
 
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
+
 [![CI](https://github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-SDK đa ngôn ngữ chính thức cho **HiTechCloud Sale AI** — nền tảng chatbot bán
-hàng & tự động hoá hội thoại đa kênh (Facebook Messenger, Instagram, Zalo,
-Website): kịch bản, từ khoá, chuỗi tin, broadcast, trợ lý AI, chốt đơn ngay
-trong hội thoại và webhook thời gian thực.
+Official multi-language SDK for **HiTechCloud Sale AI** — the multichannel
+sales chatbot and conversation automation platform (Facebook Messenger,
+Instagram, Zalo, Website): flows, keywords, message sequences, broadcasts,
+an AI assistant, in-conversation order closing and real-time webhooks.
 
-- Host production: `https://sale-ai.hitechcloud.vn`
-- Host sandbox: `https://sale-ai-sandbox.hitechcloud.vn`
+- Production host: `https://sale-ai.hitechcloud.vn`
+- Sandbox host: `https://sale-ai-sandbox.hitechcloud.vn`
 - Base path: `/api/v1`
-- Xác thực: `Authorization: Bearer <token>` + `X-Page-Access-Token` (thao tác kênh)
+- Authentication: `Authorization: Bearer <token>` + `X-Page-Access-Token` (channel operations)
 - Webhook signature: `X-SaleAI-Signature` (HMAC-SHA256)
 
-## Ngôn ngữ hỗ trợ
+## Supported languages
 
-| Ngôn ngữ | Gói | Thư mục |
-|----------|-----|---------|
+| Language | Package | Directory |
+|----------|---------|-----------|
 | Node.js / TypeScript | `@hitechcloudvn/sale-ai-sdk` | [`sdk/nodejs`](sdk/nodejs) |
 | Python | `hitechcloud-sale-ai` | [`sdk/python`](sdk/python) |
-| PHP | `hitechcloudvn/sale-ai-sdk` (ns `HiTechCloud\SaleAI`) | [`sdk/php`](sdk/php) |
+| PHP | `hitechcloudvn/sale-ai-sdk` (namespace `HiTechCloud\SaleAI`) | [`sdk/php`](sdk/php) |
 | Go | `github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/go` | [`sdk/go`](sdk/go) |
 | Java | `vn.hitechcloud:sale-ai-sdk` | [`sdk/java`](sdk/java) |
 
-## Tính năng
+## Features
 
-- CRUD đầy đủ: bots, flows (+blocks), keywords, sequences (+steps), broadcasts,
+- Full CRUD: bots, flows (+blocks), keywords, sequences (+steps), broadcasts,
   subscribers (+tags/custom-fields/notes), tags, segments, products, orders,
   comment-rules, widgets, AI intents, knowledge base, users, roles, webhooks.
-- Gửi tin đa định dạng: text, image, file, quick-reply, button, carousel.
-- Trợ lý AI: cấu hình, huấn luyện, gợi ý trả lời, bàn giao người thật.
-- Hộp thư đa kênh (conversations/inbox), analytics, settings.
-- Helper xác minh chữ ký webhook HMAC-SHA256 ở cả 5 ngôn ngữ.
-- Xử lý page access token, tự động retry `429`/`5xx`.
+- Rich message sending: text, image, file, quick-reply, button, carousel.
+- AI assistant: configuration, training, suggested replies, human handover.
+- Unified inbox (conversations/inbox), analytics, settings.
+- HMAC-SHA256 webhook signature verification helpers in all 5 languages.
+- Page access token handling and automatic retry for `429`/`5xx`.
 
-## Bắt đầu nhanh (Python)
+## Quick start (Python)
 
 ```python
 from hitechcloud_sale_ai import SaleAI
@@ -46,15 +50,17 @@ client.messages.send_text("bot_7c1a9f2e", "sub_2a9b8c7d", "Chao ban!",
                           page_access_token="PAGE_ACCESS_TOKEN")
 ```
 
-## Tài liệu
+## Documentation
 
-Xem thư mục [`docs/`](docs/README.md): bắt đầu nhanh, xác thực, tham chiếu API,
-xử lý lỗi, phân trang & giới hạn tốc độ. Đặc tả OpenAPI: [`openapi.json`](openapi.json).
+See the [`docs/`](docs/README.md) directory: quick start, authentication, API
+reference, error handling, pagination and rate limits. OpenAPI specification:
+[`openapi.json`](openapi.json).
 
 ## MCP server
 
-[`mcp/`](mcp/README.md) — MCP server (Node) để trợ lý AI gọi trực tiếp Sale AI.
+[`mcp/`](mcp/README.md) — MCP server (Node) that lets AI assistants call
+HiTechCloud Sale AI directly.
 
-## Giấy phép
+## License
 
 [MIT](LICENSE) © HiTechCloud Vietnam

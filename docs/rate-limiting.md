@@ -1,13 +1,18 @@
-# Phân trang & Giới hạn tốc độ
+# Pagination & rate limits
 
-## Phân trang
+> **English** | [Tiếng Việt](rate-limiting.vi.md)
 
-Mọi endpoint danh sách dùng `page` và `per_page`, trả về khối `meta.pagination`.
+---
 
-| Tham số | Kiểu | Mặc định | Mô tả |
-|---------|------|----------|-------|
-| `page` | integer | 1 | Số thứ tự trang |
-| `per_page` | integer | 20 | Số bản ghi mỗi trang (tối đa 100) |
+## Pagination
+
+Every list endpoint uses `page` and `per_page` and returns a `meta.pagination`
+block.
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `page` | integer | 1 | Page number |
+| `per_page` | integer | 20 | Records per page (max 100) |
 
 ```json
 {
@@ -20,7 +25,7 @@ Mọi endpoint danh sách dùng `page` và `per_page`, trả về khối `meta.p
 }
 ```
 
-### Duyệt hết dữ liệu (Python)
+### Iterating through all results (Python)
 
 ```python
 page = 1
@@ -33,17 +38,19 @@ while True:
     page += 1
 ```
 
-## Giới hạn tốc độ
+## Rate limits
 
-Mỗi access token có hạn mức gọi API theo phút. Thông tin trả trong header:
+Each access token has a per-minute API call allowance. The information is
+returned in headers:
 
-| Header | Ý nghĩa |
+| Header | Meaning |
 |--------|---------|
-| `X-RateLimit-Limit` | Số request tối đa trong cửa sổ |
-| `X-RateLimit-Remaining` | Số request còn lại |
-| `X-RateLimit-Reset` | Thời điểm (epoch) cửa sổ reset |
-| `Retry-After` | Số giây cần chờ khi bị `429` |
+| `X-RateLimit-Limit` | Maximum requests in the window |
+| `X-RateLimit-Remaining` | Requests remaining |
+| `X-RateLimit-Reset` | Window reset time (epoch) |
+| `Retry-After` | Seconds to wait after a `429` |
 
-Khi vượt hạn mức, API trả `429 RATE_LIMITED`. Tất cả SDK trong bộ này **tự động
-thử lại** theo `Retry-After` (và backoff luỹ thừa cho lỗi 5xx). Gửi broadcast
-lớn qua endpoint broadcast thay vì lặp lại lời gọi gửi tin.
+When the allowance is exceeded, the API returns `429 RATE_LIMITED`. All SDKs in
+this suite **retry automatically** honoring `Retry-After` (and exponential
+backoff for 5xx errors). Send large broadcasts through the broadcast endpoint
+instead of repeating message-sending calls.

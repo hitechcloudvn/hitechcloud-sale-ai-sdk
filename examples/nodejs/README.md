@@ -1,4 +1,8 @@
-# Ví dụ Node.js
+# Node.js examples
+
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
 
 ```bash
 npm install @hitechcloudvn/sale-ai-sdk

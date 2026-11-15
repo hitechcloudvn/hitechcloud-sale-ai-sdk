@@ -1,26 +1,30 @@
-# Bắt đầu nhanh
+# Quick start
 
-HiTechCloud Sale AI giúp bán hàng và tự động hoá hội thoại trực tiếp trong tin
-nhắn trên nhiều kênh (Facebook Messenger, Instagram, Zalo, Website).
+> **English** | [Tiếng Việt](getting-started.vi.md)
 
-## 1. Lấy access token
+---
 
-1. Đăng nhập cổng quản trị tại `https://sale-ai.hitechcloud.vn`.
-2. Vào **Cấu hình → API & Tích hợp → Access Token**.
-3. Tạo token mới, chọn phạm vi (scope) và sao chép (chỉ hiển thị một lần).
-4. Lưu token trong biến môi trường, không commit lên kho mã.
+HiTechCloud Sale AI helps you sell and automate conversations directly in
+messaging channels (Facebook Messenger, Instagram, Zalo, Website).
 
-## 2. Cài đặt SDK
+## 1. Get an access token
 
-| Ngôn ngữ | Lệnh |
-|----------|------|
+1. Sign in to the admin portal at `https://sale-ai.hitechcloud.vn`.
+2. Go to **Settings → API & Integration → Access Token**.
+3. Create a new token, choose the scopes and copy it (shown only once).
+4. Store the token in an environment variable; never commit it to the repository.
+
+## 2. Install the SDK
+
+| Language | Command |
+|----------|---------|
 | Node.js / TS | `npm install @hitechcloudvn/sale-ai-sdk` |
 | Python | `pip install hitechcloud-sale-ai` |
 | PHP | `composer require hitechcloudvn/sale-ai-sdk` |
 | Go | `go get github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/go` |
 | Java | `vn.hitechcloud:sale-ai-sdk` (Maven) |
 
-## 3. Gọi API đầu tiên
+## 3. Make your first API call
 
 ```python
 from hitechcloud_sale_ai import SaleAI
@@ -30,9 +34,10 @@ bots = client.bots.list()
 print(bots["data"])
 ```
 
-## 4. Gửi tin nhắn đầu tiên
+## 4. Send your first message
 
-Các endpoint gửi tin cần thêm header `X-Page-Access-Token` (token trang của bot):
+Message-sending endpoints also require the `X-Page-Access-Token` header (the
+bot's page token):
 
 ```python
 client.messages.send_text(
@@ -41,7 +46,8 @@ client.messages.send_text(
 )
 ```
 
-## 5. Môi trường Sandbox
+## 5. Sandbox environment
 
-Dùng `base_url="https://sale-ai-sandbox.hitechcloud.vn"` để thử nghiệm. Trên sandbox, tin nhắn KHÔNG gửi ra kênh
-thật nhưng webhook vẫn phát sự kiện thật để bạn kiểm thử trình nhận.
+Use `base_url="https://sale-ai-sandbox.hitechcloud.vn"` for testing. On
+sandbox, messages are NOT delivered to real channels, but webhooks still emit
+real events so you can test your receiver.

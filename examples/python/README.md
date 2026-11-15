@@ -1,4 +1,8 @@
-# Ví dụ Python
+# Python examples
+
+> **English** | [Tiếng Việt](README.vi.md)
+
+---
 
 ```bash
 pip install hitechcloud-sale-ai
