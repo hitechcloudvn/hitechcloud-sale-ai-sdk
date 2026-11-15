@@ -1,6 +1,6 @@
 # Ví dụ PHP
 
 ```bash
-composer require hitechcloud-vietnam/sale-ai-sdk
+composer require hitechcloudvn/sale-ai-sdk
 php basic_usage.php
 ```

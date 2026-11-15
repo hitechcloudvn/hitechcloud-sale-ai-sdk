@@ -2,14 +2,14 @@
 
 SDK Go chính thức cho **HiTechCloud Sale AI**.
 
-- Module: `github.com/hitechcloud-vietnam/hitechcloud-sale-ai-sdk/go`
+- Module: `github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/go`
 - Host: `https://sale-ai.hitechcloud.vn`
 - Base path: `/api/v1`
 
 ## Cài đặt
 
 ```bash
-go get github.com/hitechcloud-vietnam/hitechcloud-sale-ai-sdk/go
+go get github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/go
 ```
 
 ## Bắt đầu nhanh
@@ -19,7 +19,7 @@ package main
 
 import (
     "fmt"
-    saleai "github.com/hitechcloud-vietnam/hitechcloud-sale-ai-sdk/go"
+    saleai "github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/go"
 )
 
 func main() {

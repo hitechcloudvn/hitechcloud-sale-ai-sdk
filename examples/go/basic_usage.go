@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	saleai "github.com/hitechcloud-vietnam/hitechcloud-sale-ai-sdk/go"
+	saleai "github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/go"
 )
 
 func main() {

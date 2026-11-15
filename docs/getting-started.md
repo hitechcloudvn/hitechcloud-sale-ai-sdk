@@ -14,10 +14,10 @@ nhắn trên nhiều kênh (Facebook Messenger, Instagram, Zalo, Website).
 
 | Ngôn ngữ | Lệnh |
 |----------|------|
-| Node.js / TS | `npm install @hitechcloud-vietnam/sale-ai-sdk` |
+| Node.js / TS | `npm install @hitechcloudvn/sale-ai-sdk` |
 | Python | `pip install hitechcloud-sale-ai` |
-| PHP | `composer require hitechcloud-vietnam/sale-ai-sdk` |
-| Go | `go get github.com/hitechcloud-vietnam/hitechcloud-sale-ai-sdk/go` |
+| PHP | `composer require hitechcloudvn/sale-ai-sdk` |
+| Go | `go get github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/go` |
 | Java | `vn.hitechcloud:sale-ai-sdk` (Maven) |
 
 ## 3. Gọi API đầu tiên

@@ -5,9 +5,9 @@ Cảm ơn bạn quan tâm đóng góp cho HiTechCloud Sale AI SDK!
 ## Cấu trúc kho mã
 
 ```
-sdk/nodejs   - SDK TypeScript (@hitechcloud-vietnam/sale-ai-sdk)
+sdk/nodejs   - SDK TypeScript (@hitechcloudvn/sale-ai-sdk)
 sdk/python   - SDK Python (hitechcloud-sale-ai)
-sdk/php      - SDK PHP (hitechcloud-vietnam/sale-ai-sdk)
+sdk/php      - SDK PHP (hitechcloudvn/sale-ai-sdk)
 sdk/go       - SDK Go
 sdk/java     - SDK Java (vn.hitechcloud:sale-ai-sdk)
 mcp          - MCP server (Node)

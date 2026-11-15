@@ -11,7 +11,13 @@
 
     <name>HiTechCloud Sale AI Java SDK</name>
     <description>Official Java SDK for the HiTechCloud Sale AI API</description>
-    <url>https://github.com/hitechcloud-vietnam/hitechcloud-sale-ai-sdk</url>
+    <url>https://github.com/hitechcloudvn/hitechcloud-sale-ai-sdk</url>
+
+    <scm>
+        <connection>scm:git:https://github.com/hitechcloudvn/hitechcloud-sale-ai-sdk.git</connection>
+        <developerConnection>scm:git:https://github.com/hitechcloudvn/hitechcloud-sale-ai-sdk.git</developerConnection>
+        <url>https://github.com/hitechcloudvn/hitechcloud-sale-ai-sdk</url>
+    </scm>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

@@ -9,7 +9,7 @@ SDK PHP chính thức cho **HiTechCloud Sale AI** (PHP 8+, Guzzle).
 ## Cài đặt
 
 ```bash
-composer require hitechcloud-vietnam/sale-ai-sdk
+composer require hitechcloudvn/sale-ai-sdk
 ```
 
 ## Bắt đầu nhanh

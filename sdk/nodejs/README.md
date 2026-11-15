@@ -8,13 +8,13 @@ SDK TypeScript chính thức cho **HiTechCloud Sale AI**.
 ## Cài đặt
 
 ```bash
-npm install @hitechcloud-vietnam/sale-ai-sdk
+npm install @hitechcloudvn/sale-ai-sdk
 ```
 
 ## Bắt đầu nhanh
 
 ```ts
-import { SaleAI } from "@hitechcloud-vietnam/sale-ai-sdk";
+import { SaleAI } from "@hitechcloudvn/sale-ai-sdk";
 
 const client = new SaleAI({ token: "YOUR_TOKEN" });
 
@@ -31,7 +31,7 @@ await client.messages.sendText(
 ## Webhook
 
 ```ts
-import { verifySignature, SIGNATURE_HEADER } from "@hitechcloud-vietnam/sale-ai-sdk";
+import { verifySignature, SIGNATURE_HEADER } from "@hitechcloudvn/sale-ai-sdk";
 
 const ok = verifySignature(rawBody, req.headers[SIGNATURE_HEADER.toLowerCase()], "whsec_...");
 ```

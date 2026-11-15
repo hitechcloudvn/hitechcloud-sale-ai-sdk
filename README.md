@@ -1,5 +1,8 @@
 # HiTechCloud Sale AI SDK
 
+[![CI](https://github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/actions/workflows/ci.yml/badge.svg)](https://github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 SDK đa ngôn ngữ chính thức cho **HiTechCloud Sale AI** — nền tảng chatbot bán
 hàng & tự động hoá hội thoại đa kênh (Facebook Messenger, Instagram, Zalo,
 Website): kịch bản, từ khoá, chuỗi tin, broadcast, trợ lý AI, chốt đơn ngay
@@ -15,10 +18,10 @@ trong hội thoại và webhook thời gian thực.
 
 | Ngôn ngữ | Gói | Thư mục |
 |----------|-----|---------|
-| Node.js / TypeScript | `@hitechcloud-vietnam/sale-ai-sdk` | [`sdk/nodejs`](sdk/nodejs) |
+| Node.js / TypeScript | `@hitechcloudvn/sale-ai-sdk` | [`sdk/nodejs`](sdk/nodejs) |
 | Python | `hitechcloud-sale-ai` | [`sdk/python`](sdk/python) |
-| PHP | `hitechcloud-vietnam/sale-ai-sdk` (ns `HiTechCloud\SaleAI`) | [`sdk/php`](sdk/php) |
-| Go | `github.com/hitechcloud-vietnam/hitechcloud-sale-ai-sdk/go` | [`sdk/go`](sdk/go) |
+| PHP | `hitechcloudvn/sale-ai-sdk` (ns `HiTechCloud\SaleAI`) | [`sdk/php`](sdk/php) |
+| Go | `github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/go` | [`sdk/go`](sdk/go) |
 | Java | `vn.hitechcloud:sale-ai-sdk` | [`sdk/java`](sdk/java) |
 
 ## Tính năng

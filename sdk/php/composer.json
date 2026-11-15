@@ -1,8 +1,13 @@
 {
-    "name": "hitechcloud-vietnam/sale-ai-sdk",
+    "name": "hitechcloudvn/sale-ai-sdk",
     "description": "Official PHP SDK for the HiTechCloud Sale AI API",
     "type": "library",
     "license": "MIT",
+    "homepage": "https://developers.hitechcloud.vn/tai-lieu/sale-ai",
+    "support": {
+        "issues": "https://github.com/hitechcloudvn/hitechcloud-sale-ai-sdk/issues",
+        "source": "https://github.com/hitechcloudvn/hitechcloud-sale-ai-sdk"
+    },
     "authors": [
         { "name": "HiTechCloud Vietnam", "email": "support@hitechcloud.vn" }
     ],

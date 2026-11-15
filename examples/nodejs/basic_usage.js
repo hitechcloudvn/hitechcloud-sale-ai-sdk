@@ -4,7 +4,7 @@
  *   export SALE_AI_TOKEN=your-token
  *   export SALE_AI_PAGE_ACCESS_TOKEN=page-token
  */
-const { SaleAI, verifySignature, computeSignature } = require("@hitechcloud-vietnam/sale-ai-sdk");
+const { SaleAI, verifySignature, computeSignature } = require("@hitechcloudvn/sale-ai-sdk");
 
 async function main() {
   const client = new SaleAI({

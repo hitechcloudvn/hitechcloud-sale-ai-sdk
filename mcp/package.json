@@ -1,9 +1,17 @@
 {
-  "name": "@hitechcloud-vietnam/sale-ai-mcp",
+  "name": "@hitechcloudvn/sale-ai-mcp",
   "version": "1.0.0",
   "description": "MCP server for the HiTechCloud Sale AI API",
   "type": "module",
   "main": "server.js",
+  "homepage": "https://developers.hitechcloud.vn/tai-lieu/sale-ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hitechcloudvn/hitechcloud-sale-ai-sdk.git",
+    "directory": "mcp"
+  },
+  "author": "HiTechCloud Vietnam <support@hitechcloud.vn>",
+  "license": "MIT",
   "bin": { "hitechcloud-sale-ai-mcp": "server.js" },
   "scripts": { "start": "node server.js" },
   "dependencies": {
